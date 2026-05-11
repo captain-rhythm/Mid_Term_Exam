@@ -1,14 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio — EDGE-IICT CUET Batch 1048</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    1st line of code
-    <h1>Heading 1</h1>
-    <p>This is a paragraph.</p>     
-    <div>this is our git fundamemntal class</div>
+
+  <!-- ── HEADER ──────────────────────────────────────────── -->
+  <header>
+    <nav>
+      <a href="#about" class="nav-logo">Portfolio</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ── ABOUT — Editorial Hero ─────────────────────────── -->
+  <section id="about">
+    <div class="hero-wrapper">
+
+      <!-- Top bar (replicates nav style from design) -->
+      <div class="hero-topbar">
+        <div class="hero-topbar-name">Arerfin Mostofa Rhythm</div>
+        
+        <a href="#contact" class="hero-topbar-contact">Contact</a>
+      </div>
+
+      <!-- Giant background name letters -->
+      <div class="hero-big-name" aria-hidden="true">Arefin</div>
+
+      <!-- Tall portrait photo -->
+      <div class="hero-photo-area">
+        <div class="hero-photo-frame">
+          <img
+            src="/batman.png"
+            
+            alt="Arefin Mostofa — Full Stack Developer"
+          />
+        </div>
+      </div>
+
+      <!-- Info panel bottom-left -->
+      <div class="hero-info-panel">
+        <span class="hero-role-tag">Full Stack Developer</span>
+        <div class="hero-display-name">Arefin<br>Mostofa</div>
+        <p class="hero-bio">
+          CS student passionate about building efficient, user-friendly web applications.
+          My goal is to craft impactful digital experiences — clean frontends, scalable backends.
+        </p>
+        <a href="#contact" class="btn-hire">Hire Me</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SKILLS ──────────────────────────────────────────── -->
+  <section id="skills">
+    <div class="section-label">What I Know</div>
+    <div class="section-title">My Skills</div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">🌐</div>
+        <div class="skill-name">HTML</div>
+        <p class="skill-desc">Semantic markup, accessibility best practices, and well-structured page architecture.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🎨</div>
+        <div class="skill-name">CSS</div>
+        <p class="skill-desc">Modern layouts with Flexbox & Grid, animations, and polished visual design.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">⚡</div>
+        <div class="skill-name">JavaScript</div>
+        <p class="skill-desc">Dynamic interactivity, DOM manipulation, ES6+ features, and async programming.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">📱</div>
+        <div class="skill-name">Responsive Design</div>
+        <p class="skill-desc">Mobile-first layouts using media queries to ensure great UX on all screen sizes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ─────────────────────────────────────────── -->
+  <section id="projects">
+    <div class="section-label">What I Built</div>
+    <div class="section-title">Projects</div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <span class="project-tag">Frontend</span>
+        <div class="project-name">E-Commerce UI</div>
+        <p class="project-desc">A fully responsive shopping interface with cart logic, filters, and product gallery.</p>
+      </div>
+      <div class="project-card">
+        <span class="project-tag">Full Stack</span>
+        <div class="project-name">Task Manager App</div>
+        <p class="project-desc">A Node.js + Express task board with user authentication and real-time updates.</p>
+      </div>
+      <div class="project-card">
+        <span class="project-tag">JavaScript</span>
+        <div class="project-name">Weather Dashboard</div>
+        <p class="project-desc">Fetches live weather data via OpenWeather API and displays animated forecasts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COUNTER (Task 4) ─────────────────────────────────── -->
+  <section id="counter">
+    <div class="section-label">Task 4 — Timing Events</div>
+    <div class="section-title">Live Visitor Counter</div>
+    <div class="counter-card">
+      <div class="counter-label">🟢 Live Counter</div>
+      <div class="counter-value" id="counterValue">0</div>
+      <div class="counter-sub">visitors since page load · updates every second</div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT (Task 5) ─────────────────────────────────── -->
+  <section id="contact">
+    <div class="section-label">Get In Touch</div>
+    <div class="section-title">Contact Me</div>
+
+    <div class="contact-form">
+
+      <!-- Name -->
+      <div class="form-group">
+        <label for="fname">Full Name</label>
+        <input type="text" id="fname" placeholder="e.g. Arein Mostofa"/>
+        <div class="field-error" id="nameError">⚠ Name cannot be empty.</div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="femail">Email Address</label>
+        <input type="email" id="femail" placeholder="e.g. mdareinmostofa@email.com"/>
+        <div class="field-error" id="emailError">⚠ Enter a valid email containing @.</div>
+      </div>
+
+      <!-- Age -->
+      <div class="form-group">
+        <label for="fage">Age</label>
+        <input type="number" id="fage" placeholder="e.g. 21" min="1"/>
+        <div class="field-error" id="ageError">⚠ Age cannot be empty and must be a number.</div>
+      </div>
+
+      <!-- Message + Live Char Counter -->
+      <div class="form-group">
+        <label for="fmessage">Message</label>
+        <textarea id="fmessage" placeholder="Write your message here…" maxlength="1200"></textarea>
+        <div class="char-counter" id="charCount">0 / 1000 characters</div>
+        <div class="field-error" id="msgError">⚠ Message cannot be empty and must be under 1000 characters.</div>
+      </div>
+
+      <button class="btn-submit" onclick="validateForm()">Send Message</button>
+      <div class="form-success" id="formSuccess"> Message sent successfully! I'll get back to you soon.</div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ───────────────────────────────────────────── -->
+  <footer>
+    <p>Built for <span>EDGE-IICT CUET</span> · Batch 1048 · Full Stack Mid Assessment &nbsp;|&nbsp; &copy; 2026 Arefin Mostofa</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
